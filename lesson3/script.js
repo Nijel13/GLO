@@ -17,10 +17,9 @@ console.log(addExpenses.toLowerCase().split(", "));
 let budgetDay = money/30;
 console.log("Бюджет на день = " + budgetDay);
 
-let question1 = +prompt("Ваш месячный доход?");
-money = question1; 
+money = +prompt("Ваш месячный доход?");
 addExpenses = prompt("Перечислите возможные расходы за рассчитываемый период через запятую");
-deposit = prompt("Есть ли у вас депозит в банке?");
+deposit = confirm("Есть ли у вас депозит в банке?");
 let expenses1 = prompt("Введите обязательную статью расходов");
 let amount1 = +prompt("Во сколько это обойдется?");
 let expenses2 = prompt("Введите обязательную статью расходов");
@@ -31,7 +30,7 @@ console.log("Цель будет достигнута через = " + Math.ceil
 budgetDay = Math.floor(budgetMonth/30);
 console.log("Бюджет на день новый = " + budgetDay);
 
-if (budgetDay => 1200){
+if (budgetDay >= 1200){
     console.log("У вас высокий уровень дохода");
 }
     else if (600 <= budgetDay < 1200){
